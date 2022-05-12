@@ -1,5 +1,5 @@
 {
-    "name": "Hassio Pi Hole",
+    "name": "Pi Hole",
     "url": "https://github.com/kaliumxyz/addon-pi-hole/",
     "maintainer": "kaliumxyz <github@kalium.xyz>"
 }
