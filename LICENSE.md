@@ -1,5 +1,6 @@
 # MIT License
 
+Copyright (c) 2022 Martijn Becker
 Copyright (c) 2017-2020 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

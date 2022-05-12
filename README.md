@@ -14,37 +14,7 @@
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-[![Discord][discord-shield]][discord]
-[![Community Forum][forum-shield]][forum]
-
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
-
-[![Support Frenck on Patreon][patreon-shield]][patreon]
-
 Network-wide ad blocking
-
-<!-- ## Deprecation warning
-
-**This add-on is in a deprecated state!**
-
-The Pi-hole add-on is now deprecated and will no longer be supported, maintained
-and will not receive future updates or fixes.
-
-Pi-hole used to be a great solution to filter network traffic, but it has been
-a challenge to keep/get it in a working state as an add-on.
-
-Meanwhile, the AdGuard team published an alternative:
-[AdGuard Home](https://github.com/hassio-addons/addon-adguard-home).
-
-AdGuard Home as surpassed Pi-hole in terms of capabilities, features,
-and stability, and Home Assistant provides a good integration with AdGuard.
-Above all, the AdGuard Home team has been supportive in developing the add-on.
-
-For those reasons, it is no longer viable to keep maintaining the Pi-hole
-add-on, which has been problematic at best.
-
-We strongly recommend migrating to the AdGuard Home add-on, which is available
-in the add-on store. -->
 
 ## About
 
@@ -232,45 +202,6 @@ based on the following:
 - ``MINOR``: Backwards-compatible new features and enhancements.
 - ``PATCH``: Backwards-compatible bugfixes and package updates.
 
-## Support
-
-Got questions?
-
-You have several options to get them answered:
-
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
-  support and feature requests.
-- The [Home Assistant Discord chat server][discord-ha] for general Home
-  Assistant discussions and questions.
-- The Home Assistant [Community Forum][forum].
-- Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
-
-You could also [open an issue here][issue] GitHub.
-
-## Contributing
-
-This is an active open-source project. We are always open to people who want to
-use the code or contribute to it.
-
-We have set up a separate document containing our
-[contribution guidelines](CONTRIBUTING.md).
-
-Thank you for being involved! :heart_eyes:
-
-## Authors & contributors
-
-The original setup of this repository is by [Franck Nijhof][frenck].
-
-For a full list of all authors and contributors,
-check [the contributor's page][contributors].
-
-## We have got some Home Assistant add-ons for you
-
-Want some more functionality to your Home Assistant instance?
-
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
-
 ## Trademark legal notice
 
 This add-on is not created, developed, affiliated, supported, maintained
@@ -286,6 +217,7 @@ Use of these names, logos, trademarks, and brands does not imply endorsement.
 
 MIT License
 
+Copyright (c) 2022 Martijn Becker
 Copyright (c) 2017-2020 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -310,31 +242,14 @@ SOFTWARE.
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-pi-hole.svg
-[commits]: https://github.com/hassio-addons/addon-pi-hole/commits/master
-[contributors]: https://github.com/hassio-addons/addon-pi-hole/graphs/contributors
-[discord-ha]: https://discord.gg/c5DvZ4e
-[discord-shield]: https://img.shields.io/discord/478094546522079232.svg
-[discord]: https://discord.me/hassioaddons
-[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-pi-hole/33817?u=frenck
-[frenck]: https://github.com/frenck
-[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
-[github-sponsors]: https://github.com/sponsors/frenck
-[gitlabci-shield]: https://gitlab.com/hassio-addons/addon-pi-hole/badges/master/pipeline.svg
-[gitlabci]: https://gitlab.com/hassio-addons/addon-pi-hole/pipelines
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[issue]: https://github.com/hassio-addons/addon-pi-hole/issues
+[issue]: https://github.com/kaliumxyz/addon-pi-hole/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-pi-hole.svg
+[license-shield]: https://img.shields.io/github/license/kaliumxyz/addon-pi-hole.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
-[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
-[patreon]: https://www.patreon.com/frenck
 [pi-hole-integration]: https://www.home-assistant.io/components/pi_hole/
 [pi-hole]: https://pi-hole.net/
-<!-- [project-stage-shield]: https://img.shields.io/badge/project%20stage-%20!%20DEPRECATED%20%20%20!-ff0000.svg -->
-[reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-pi-hole.svg
-[releases]: https://github.com/hassio-addons/addon-pi-hole/releases
-[repository]: https://github.com/hassio-addons/repository
+[releases-shield]: https://img.shields.io/github/release/kaliumxyz/addon-pi-hole.svg
+[releases]: https://github.com/kaliumxyz/addon-pi-hole/releases
+[repository]: https://github.com/kaliumxyz/repository
 [semver]: http://semver.org/spec/v2.0.0.html
