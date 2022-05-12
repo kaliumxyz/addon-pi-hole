@@ -1,5 +1,5 @@
 {
     "name": "Hassio Pi Hole",
-    "url": "https://github.com/flbas1/addon-pi-hole/",
-    "maintainer": "Chris Stewart <flbas1@gmail.com>"
+    "url": "https://github.com/kaliumxyz/addon-pi-hole/",
+    "maintainer": "kaliumxyz <github@kalium.xyz>"
 }
