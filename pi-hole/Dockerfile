@@ -13,6 +13,7 @@ ENV PATH="${PATH}:/opt/pihole" \
     WEB_TAG="v5.12" \
     FTL_TAG="v5.15"
 
+
 # We need to copy in the patches need during build
 COPY rootfs/patches /patches
 
@@ -20,46 +21,47 @@ COPY rootfs/patches /patches
 # hadolint ignore=DL3003
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        gcc=9.2.0-r4 \
-        make=4.2.1-r2 \
-        musl-dev=1.1.24-r2 \
+        gcc=11.2.1_git20220219-r2 \
+        make=4.3-r0 \
+        cmake=3.23.1-r0 \
+        musl-dev=1.2.3-r0 \
         libexecinfo-dev=1.1-r1 \
-        linux-headers=4.19.36-r0 \
-        nettle-dev=3.5.1-r0 \
-        build-base=0.5-r1 \
+        linux-headers=5.16.7-r1 \
+        nettle-dev=3.7.3-r0 \
+        build-base=0.5-r3 \
+        libidn=1.38-r0 \
     \
     && apk add --no-cache \
+        php8=8.0.20-r0 \
+        php8-cgi=8.0.20-r0 \
+        php8-sqlite3=8.0.20-r0 \
+        php8-session=8.0.20-r0 \
+        php8-openssl=8.0.20-r0 \
+        php8-json \
+        php8-fileinfo=8.0.20-r0 \
+        php8-phar=8.0.20-r0 \
         bc=1.07.1-r1 \
-        bind-tools=9.14.8-r5 \
-        coreutils=8.31-r0 \
-        git=2.24.1-r0 \
-        grep=3.3-r0 \
-        libcap=2.27-r0 \
-        libxml2=2.9.10-r2 \
-        logrotate=3.15.1-r0 \
-        lua-resty-http=0.15-r0 \
-        ncurses=6.1_p20200118-r2 \
-        nettle=3.5.1-r0 \
-        nginx-mod-http-lua=1.16.1-r6 \
-        nginx=1.16.1-r6 \
-        openssl=1.1.1d-r3 \
-        perl=5.30.1-r0 \
-        php7-fileinfo=7.3.16-r0 \
-        php7-fpm=7.3.16-r0 \
-        php7-json=7.3.16-r0 \
-        php7-opcache=7.3.16-r00 \
-        php7-openssl=7.3.16-r0 \
-        php7-phar=7.3.16-r0 \
-        php7-session=7.3.16-r0 \
-        php7-sockets=7.3.16-r0\
-        php7-sqlite3=7.3.16-r0 \
-        php7-zip=7.3.16-r0 \
-        procps=3.3.16-r0 \
-        psmisc=23.3-r0 \
-        sed=4.7-r0 \
-        sqlite=3.30.1-r1 \
-        sudo=1.8.31-r0 \
-        wget=1.20.3-r0 \
+        bind-tools=9.16.29-r0 \
+        coreutils=9.1-r0 \
+        git=2.36.1-r0 \
+        grep=3.7-r0 \
+        libcap=2.64-r0 \
+        libxml2=2.9.14-r0 \
+        logrotate=3.19.0-r1 \
+        lua-resty-http=0.16.1-r0 \
+        ncurses=6.3_p20220521-r0 \
+        nettle=3.7.3-r0 \
+        nginx-mod-http-lua=1.22.0-r0 \
+        nginx=1.22.0-r0 \
+        openssl=1.1.1o-r0 \
+        perl=5.34.1-r0 \
+        procps=3.3.17-r1 \
+        psmisc=23.5-r0 \
+        sed=4.8-r0 \
+        sqlite=3.38.5-r0 \
+        sudo=1.9.10-r0 \
+        wget=1.21.3-r0 \
+fd \
     \
     && addgroup -S pihole \
     && adduser -S -s /sbin/nologin pihole pihole \
@@ -78,10 +80,10 @@ RUN \
     && git -C /root/FTL checkout -b master \
     \
     && cd /root/FTL \
-    && patch -p1 < /patches/FTL/fix-nettle-3.5-compat.patch \
-    && patch -p1 < /patches/FTL/fix-poll-h-include-warning-on-musl.patch \
-    && patch -p1 < /patches/FTL/no-backtrace-on-musl.patch \
-    && make \
+    && ls /\
+    && patch -p1 < /patches/FTL/libidn.patch \
+    && ln -s /usr/lib/libidn.so.12 ./libidn.so \
+    && ./build.sh -i \
     && mv /root/FTL/pihole-FTL /usr/bin \
     && cd - \
     \
@@ -114,7 +116,7 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Martijn Becker <kalium@kalium.xyz>" \
+    maintainer="kaliumxyz <kalium@kalium.xyz>" \
     org.label-schema.description="Network-wide ad blocking" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Pi-hole" \
