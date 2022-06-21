@@ -29,9 +29,11 @@ RUN \
         linux-headers=5.16.7-r1 \
         nettle-dev=3.7.3-r0 \
         build-base=0.5-r3 \
-        libidn=1.38-r0 \
     \
     && apk add --no-cache \
+        libidn-dev=1.38-r0 \
+        readline-dev=8.1.2-r0 \
+        readline=8.1.2-r0 \
         php8=8.0.20-r0 \
         php8-cgi=8.0.20-r0 \
         php8-sqlite3=8.0.20-r0 \
@@ -80,10 +82,7 @@ fd \
     && git -C /root/FTL checkout -b master \
     \
     && cd /root/FTL \
-    && ls /\
-    && patch -p1 < /patches/FTL/libidn.patch \
-    && ln -s /usr/lib/libidn.so.12 ./libidn.so \
-    && ./build.sh -i \
+    && ./build.sh \
     && mv /root/FTL/pihole-FTL /usr/bin \
     && cd - \
     \
