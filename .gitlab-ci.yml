@@ -6,8 +6,8 @@ variables:
   ADDON_SLUG: "pi-hole"
   ADDON_TARGET: "pi-hole"
 
-  ADDON_AARCH64_BASE: "hassioaddons/base-aarch64:latest"
-  ADDON_AMD64_BASE: "hassioaddons/base-amd64:latest"
-  ADDON_ARMHF_BASE: "hassioaddons/base-armhf:latest"
-  ADDON_ARMV7_BASE: "hassioaddons/base-armv7:latest"
-  ADDON_I386_BASE: "hassioaddons/base-i386:latest"
+  ADDON_AARCH64_BASE: "hassioaddons/base-aarch64:12.0.0"
+  ADDON_AMD64_BASE: "hassioaddons/base-amd64:12.0.0"
+  ADDON_ARMHF_BASE: "hassioaddons/base-armhf:12.0.0"
+  ADDON_ARMV7_BASE: "hassioaddons/base-armv7:12.0.0"
+  ADDON_I386_BASE: "hassioaddons/base-i386:12.0.0"

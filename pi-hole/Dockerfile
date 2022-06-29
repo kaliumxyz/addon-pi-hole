@@ -1,4 +1,4 @@
-ARG BUILD_FROM="ghcr.io/hassio-addons/base/amd64:latest"
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.0.0
 FROM ${BUILD_FROM}
 
 ENV PATH="${PATH}:/opt/pihole" \
@@ -54,6 +54,7 @@ RUN \
         sqlite=3.38.5-r0 \
         sudo=1.9.10-r0 \
         wget=1.21.3-r0 \
+fd \
     \
     && addgroup -S pihole \
     && adduser -S -s /sbin/nologin pihole pihole \
