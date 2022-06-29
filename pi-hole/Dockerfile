@@ -32,6 +32,7 @@ RUN \
     \
     && apk add --no-cache \
         libidn-dev=1.38-r0 \
+        libidn=1.38-r0 \
         readline-dev=8.1.2-r0 \
         readline=8.1.2-r0 \
         php8=8.0.20-r0 \
@@ -49,12 +50,13 @@ RUN \
         grep=3.7-r0 \
         libcap=2.64-r0 \
         libxml2=2.9.14-r0 \
-        logrotate=3.19.0-r1 \
+        logrotate=3.19.0-r2 \
         lua-resty-http=0.16.1-r0 \
         ncurses=6.3_p20220521-r0 \
+        ncurses-dev=6.3_p20220521-r0 \
         nettle=3.7.3-r0 \
-        nginx-mod-http-lua=1.22.0-r0 \
-        nginx=1.22.0-r0 \
+        nginx-mod-http-lua=1.22.0-r1 \
+        nginx=1.22.0-r1 \
         openssl=1.1.1o-r0 \
         perl=5.34.1-r0 \
         procps=3.3.17-r1 \
