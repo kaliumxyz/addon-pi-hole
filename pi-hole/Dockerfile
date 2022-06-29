@@ -1,21 +1,10 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.0.0
 FROM ${BUILD_FROM}
 
-# Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
-#!/bin/bash
-
-# https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
-
 ENV PATH="${PATH}:/opt/pihole" \
     CORE_TAG="v5.10" \
     WEB_TAG="v5.12" \
     FTL_TAG="v5.12"
-
-
-# We need to copy in the patches need during build
-COPY rootfs/patches /patches
 
 # Setup base
 # hadolint ignore=DL3003
