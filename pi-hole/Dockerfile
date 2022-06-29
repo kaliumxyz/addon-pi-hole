@@ -54,7 +54,6 @@ RUN \
         sqlite=3.38.5-r0 \
         sudo=1.9.10-r0 \
         wget=1.21.3-r0 \
-fd \
     \
     && addgroup -S pihole \
     && adduser -S -s /sbin/nologin pihole pihole \
@@ -92,6 +91,7 @@ fd \
 
 # Copy root filesystem
 COPY rootfs /
+RUN chmod -R +x /etc/cont-init.d/
 
 # Build arguments
 ARG BUILD_ARCH
